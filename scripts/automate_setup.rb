@@ -72,15 +72,11 @@ FileUtils.touch('/var/opt/delivery/.telemetry.disabled')
 creatuser= Mixlib::ShellOut.new("automate-ctl create-user default #{@adminUsername} --password #{@adminpassword}")
 creatuser.run_command
 
-usercreat= Mixlib::ShellOut.new("chef-server-ctl user-create  sdheerms  sudheer ms   password1234 | tee /etc/opscode/sudheerms.pem")
-usercreat.run_command
-
-usercreate= Mixlib::ShellOut.new("chef-server-ctl user-create  #{@adminUsername} #{@firstname} #{@lastname} #{@mailid} #{@adminpassword} | tee /etc/opscode/#{@adminUsername}.pem")
+usercreate= Mixlib::ShellOut.new("chef-server-ctl user-create  #{@adminUsername}  #{@firstname}  #{@lastname}  #{@mailid}  #{@adminpassword} | tee /etc/opscode/#{@adminUsername}.pem")
 usercreate.run_command
 
  orgcreate= Mixlib::ShellOut.new(" chef-server-ctl org-create #{@orguser} NewOrg  -a  #{@adminUsername} | tee /etc/opscode/#{@orguser}-validator.pem")
  orgcreate.run_command
-
 ##pull files from repo
 system("wget 'https://trendmicrop2p.blob.core.windows.net/trendmicropushtopilot/files/validatorkey.txt'  -O /tmp/validatorkey.txt")
 system("wget 'https://trendmicrop2p.blob.core.windows.net/trendmicropushtopilot/files/userkey.txt' -O /tmp/userkey.txt")
