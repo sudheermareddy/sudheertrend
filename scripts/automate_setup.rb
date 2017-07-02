@@ -83,8 +83,8 @@ system("wget 'https://trendmicrop2p.blob.core.windows.net/trendmicropushtopilot/
 
 ##Assigning variable to construct and update key and key-value
 
-validatorke = File.read("/tmp/validatorkey.txt")
-userke = File.read("/tmp/userkey.txt")
+validatorkey = File.read("/tmp/validatorkey.txt")
+userkey = File.read("/tmp/userkey.txt")
 
 #Upload key value.
 FINAL = "\"}' #{@fqdnorch}"
