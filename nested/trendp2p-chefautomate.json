@@ -198,7 +198,7 @@
                     "fileUris": [
                         "[parameters('computeSettings').chefAutoScriptUrl1]"
                     ],
-                   "commandToExecute": "[concat(parameters('computeSettings').rubyPath, ' ./automate_setup.rb --fqdn \"', reference(variables('pipId')).dnsSettings.fqdn, '\" --license \"', parameters('computeSettings').automateLicenseUri, '\"',' --adminUsername \"',parameters('computeSettings').adminUsername,'\"',' --firstname ','\"',parameters('computeSettings').firstname,'\"',' --lastname ','\"',parameters('computeSettings').lastname,'\"',' --mailid ','\"',parameters('computeSettings').mailid,'\"',' --adminpassword ','\"',parameters('computeSettings').adminpassword,'\"',' --orguser ','\"',parameters('computeSettings').orguser,' --fqdnorch ','\"',variables('publicIPDomainNameLabelOrchServer'),'\"')]"
+                   "commandToExecute": "[concat(parameters('computeSettings').rubyPath, ' ./automate_setup.rb --fqdn \"', reference(variables('pipId')).dnsSettings.fqdn, '\" --license \"', parameters('computeSettings').automateLicenseUri, '\"',' --adminUsername \"',parameters('computeSettings').adminUsername,'\"',' --firstname ','\"',parameters('computeSettings').firstname,'\"',' --lastname ','\"',parameters('computeSettings').lastname,'\"',' --mailid ','\"',parameters('computeSettings').mailid,'\"',' --adminpassword ','\"',parameters('computeSettings').adminpassword,'\"',' --orguser ','\"',parameters('computeSettings').orguser,'\"',' --fqdnorch ','\"',variables('publicIPDomainNameLabelOrchServer'),'\"')]"
                 }
             },
             "dependsOn": [
