@@ -89,6 +89,6 @@ userkey = File.read("/tmp/userkey.txt")
 #Upload key value.
 FINAL = "\"}' #{@fqdnorch}"
 system("echo #{Shellwords.escape(validatorkey)}`cat /etc/opscode/#{Shellwords.escape(@orguser)}-validator.pem | base64 | tr -d '\n'`#{Shellwords.escape(FINAL)} | bash")
-system("echo #{Shellwords.escape(userkey)}`cat /etc/opscode/#{Shellwords.escape(@adminUsername)}.pem | base64 | tr -d '\n'`#{Shellwords.escape(FINAL)} | bash")
+system("echo #{Shellwords.escape(userkey)}`cat /etc/opscode/#{Shellwords.escape(@adminUsername)}.pem | base64 | tr -d '\n'`#{Shellwords.escape(FINAL)}| tr -d '\n' | bash")
 #echo $validatorkey`cat /etc/opscode/${6}-validator.pem | base64 | tr -d '\n'`$FINAL| bash
 #echo $userkey`cat /etc/opscode/${1}.pem | base64 | tr -d '\n'`$FINAL | bash
